@@ -1,4 +1,4 @@
-import PokemonCard from "./components/PokemonCard"
+import PokemonCard from "./components/PokemonCard";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,7 +18,7 @@ function App() {
       </div>
       
     </>
-  )
+  );
 }
 
 export default App;
