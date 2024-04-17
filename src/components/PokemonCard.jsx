@@ -1,10 +1,27 @@
 function PokemonCard() {
+ 
+  // création de la variable pokemon
+  const pokemon = pokemonList[0];
+
   return (
-      <figure>
-          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" alt="image Bulbasaur" />
-          <figcaption>Bulbasaur</figcaption>
-      </figure>
-  );
+    <figure>
+      {pokemon.imgSrc ? <img src={pokemon.imgSrc} alt={pokemon.name} /> : <p>???</p>}
+      <figcaption>{pokemon.name}</figcaption>
+    </figure>
+);
+  
 }
+
+// Ajout vaiable pokemonList
+const pokemonList = [
+  {
+    name: "bulbasaur",
+    imgSrc:
+    "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+  },
+  {
+    name: "mew",
+  },
+];
 
 export default PokemonCard;
