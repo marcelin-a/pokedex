@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 
 function PokemonCard(pokemon) {
  
-  // création de la variable pokemon
   return (
     <figure>
       {pokemon.imgSrc ? <img src={pokemon.imgSrc} alt={pokemon.name} /> : <p>???</p>}
