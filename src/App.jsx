@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useEffect } from "react";
 import './App.css';
 import NavBar from './components/NavBar.jsx';
 import PokemonCard from "./components/PokemonCard.jsx";
@@ -9,6 +10,13 @@ function App() {
   const handleClick = (Index) => {
     setpokemonIndex(Index)
   }
+
+  useEffect(
+    () =>  {
+      alert("hello pokemon trainer :)")
+    }, 
+    []
+ );
 
     // *** Insertion tableau pokemonList
     const pokemonList = [
