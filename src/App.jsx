@@ -6,12 +6,8 @@ import PokemonCard from "./components/PokemonCard.jsx";
 function App() {
   const [pokemonIndex, setpokemonIndex] = useState(0);
 
-  const handleClickp = () => {
-    setpokemonIndex(pokemonIndex - 1)
-  }
-  
-  const handleClicks = () => {
-    setpokemonIndex(pokemonIndex + 1)
+  const handleClick = (Index) => {
+    setpokemonIndex(Index)
   }
 
     // *** Insertion tableau pokemonList
@@ -42,12 +38,11 @@ function App() {
       ];  
 
       return (
-        <div>
+       <div>
         
           <PokemonCard name={pokemonList[pokemonIndex].name} imgSrc={pokemonList[pokemonIndex].imgSrc}/>
           
-          <NavBar handleClickp={handleClickp} handleClicks={handleClicks} pokemonIndex={pokemonIndex} pokemonList={pokemonList}/>
-
+          <NavBar handleClick={handleClick} pokemonIndex={pokemonIndex} pokemonList={pokemonList}/>
 
         </div>
       );
